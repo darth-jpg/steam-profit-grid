@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0e14;
+  --foreground: #e1e4ea;
+  --trade-card: #121620;
+  --trade-card-hover: #181e2b;
+  --trade-border: #1e2638;
+  --trade-border-accent: #2a364f;
+  --trade-profit: #0ecb81;
+  --trade-loss: #f6465d;
+  --trade-accent: #3b82f6;
+  --trade-warning: #f0b90b;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gaming-dark: var(--background);
+  --color-gaming-card: var(--trade-card);
+  --color-gaming-card-hover: var(--trade-card-hover);
+  --color-gaming-border: var(--trade-border);
+  --color-gaming-border-neon: var(--trade-border-accent);
+  --color-neon-cyan: var(--trade-accent);
+  --color-neon-green: var(--trade-profit);
+  --color-neon-pink: var(--trade-loss);
+  --color-neon-yellow: var(--trade-warning);
+  --color-neon-purple: #8b5cf6;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+}
+
+/* Custom scrollbar financeiro limpo */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--trade-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--trade-accent);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}

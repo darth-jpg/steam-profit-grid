@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Steam Profit Companion",
+  "version": "1.0",
+  "description": "Scans your Steam inventory and reports drops to the Steam Profit Dashboard.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://steamcommunity.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Steam Profit Companion"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://steamcommunity.com/id/*/inventory*",
+        "https://steamcommunity.com/profiles/*/inventory*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

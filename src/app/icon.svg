@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fundo Circular Charcoal -->
+  <rect width="32" height="32" rx="6" fill="#121620" />
+  
+  <!-- Gráfico de Linha Ascendente Verde Esmeralda -->
+  <path d="M6 24 L12 18 L18 20 L26 10" fill="none" stroke="#0ecb81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Seta no final da linha -->
+  <path d="M22 10 H26 V14" fill="none" stroke="#0ecb81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Cifrão/Moeda Pequeno Discreto no canto -->
+  <circle cx="24" cy="24" r="4" fill="#0ecb81" opacity="0.15" />
+</svg>

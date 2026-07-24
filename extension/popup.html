@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 280px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0b0e14;
+      color: #e1e4ea;
+      margin: 0;
+      padding: 12px;
+    }
+    h2 {
+      font-size: 14px;
+      margin: 0 0 12px 0;
+      color: #0ecb81;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid #1e2638;
+      padding-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .field {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      font-size: 10px;
+      color: #9ca3af;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #121620;
+      border: 1px solid #1e2638;
+      border-radius: 4px;
+      color: #fff;
+      padding: 6px 8px;
+      font-size: 11px;
+      font-family: monospace;
+      outline: none;
+    }
+    input:focus {
+      border-color: #3b82f6;
+    }
+    button {
+      width: 100%;
+      background-color: #0ecb81;
+      border: none;
+      border-radius: 4px;
+      color: #0b0e14;
+      padding: 7px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity 0.2s;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #9ca3af;
+      background-color: #121620;
+      border: 1px solid #1e2638;
+      border-radius: 4px;
+      padding: 6px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <h2>Steam Companion</h2>
+  
+  <div class="field">
+    <label for="dashboardUrl">Dashboard Server URL</label>
+    <input type="text" id="dashboardUrl" placeholder="http://localhost:3000">
+  </div>
+
+  <div class="field">
+    <label for="steamId">Steam ID64</label>
+    <input type="text" id="steamId" placeholder="e.g. 76561198000000000">
+  </div>
+
+  <button id="saveBtn">SAVE CONFIGURATION</button>
+  
+  <div id="status">Status: Waiting config...</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

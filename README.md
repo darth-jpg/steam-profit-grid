@@ -1,6 +1,6 @@
 # 📈 Steam Profit Grid (To Profit or Not to Profit)
 
-> An advanced financial and analytical dashboard designed to optimize Steam AFK idle farming and item trading, complemented by a companion browser extension for automated telemetry syncing.
+> An advanced financial and analytical dashboard designed to optimize Steam farming and item trading, complemented by a companion browser extension for automated telemetry syncing.
 
 ---
 

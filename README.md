@@ -1,89 +1,89 @@
 # 📈 Steam Profit Grid (To Profit or Not to Profit)
 
-> Um dashboard financeiro e analítico avançado concebido para otimizar o farming AFK, idle farming e trading de itens no Mercado da Comunidade Steam, complementado com uma extensão de navegador para sincronização automática.
+> An advanced financial and analytical dashboard designed to optimize Steam AFK idle farming and item trading, complemented by a companion browser extension for automated telemetry syncing.
 
 ---
 
-## 🚀 Funcionalidades Principais (Key Features)
+## 🚀 Key Features
 
-### 📈 1. Grelha Analítica Interativa (The Profit Grid)
-* **TOP 50 Jogos Reais da Steam:** Base de dados atualizada e enriquecida com os 50 jogos mais populares da Steam com economias ativas de mercado (skins, caixas, chaves, cartas colecionáveis e jogos de clique).
-* **Paginação Fluida:** Visualização organizada com **10 jogos por página** integrada com pesquisa textual e filtros.
-* **Filtros por Perfil de Farmer:** Filtre instantaneamente por jogos adequados a máquinas fracas (`Low-Spec AFK`), alto rendimento (`High Yield`) ou especulação rápida (`Hype Speculation`).
-* **Accordion Grid (Visualização em Leque):** Ao clicar em qualquer linha da tabela, ela expande-se verticalmente no local, renderizando o gráfico dinâmico Recharts de variação de preço a 7 dias e estatísticas de Hype exclusivas daquele jogo.
-* **Comparador de Ativos:** Escolha 2 jogos em simultâneo utilizando a ferramenta GitCompare para obter um veredito automático de ROI líquido e liquidez lado a lado.
-* **Exportação CSV:** Descarregue relatórios e cotações em formato `.csv` com formatação compatível com Excel UTF-8 BOM e delimitador `;`.
+### 📈 1. Interactive Analytical Table (The Profit Grid)
+* **TOP 50 Active Steam Games:** Enriched database containing 50 popular Steam titles with active community market economies (CS2/Rust skins, TF2 keys, War Thunder trophies, and popular clicker items like Banana, Cats, Cucumber, and Egg).
+* **Smooth Pagination:** Clean table layouts presenting exactly **10 games per page**, fully integrated with query searches and profile filters.
+* **Farming Profile Filters:** Instantly filter matches optimized for low-end machines (`Low-Spec AFK`), high profitability (`High Yield`), or rapid volatility (`Hype Speculation`).
+* **Accordion Grid View:** Click on any game row to expand it vertically on the spot, rendering dynamic Recharts 7-day price trend history and custom Hype metrics side-by-side.
+* **Side-by-Side Asset Comparison:** Select up to 2 games using the GitCompare panel to get an automated system verdict comparing active players, volume, liquidity, and net hourly ROI.
+* **Excel-Compatible CSV Export:** Download data directly from the grid in a localized `.csv` format (configured with Excel UTF-8 BOM and `;` delimiters).
 
-### 💼 2. Simulador de Carteira & Sincronizador Automático
-* **Scanner Paralelo Multi-Jogo:** Insira o seu SteamID64 ou link de perfil e a API irá consultar todos os inventários de jogos suportados em paralelo (`Promise.all`) em segundo plano de forma otimizada.
-* **Gráfico de Distribuição Interativo (Pie Chart):** Visualize a alocação de valor de cada jogo na sua carteira. **Clique em qualquer fatia do gráfico** para filtrar automaticamente a tabela de itens abaixo para esse jogo específico.
-* **Carteira Limpa por Definição:** Comece do zero com a carteira vazia e adicione manualmente itens ou faça a leitura automática da Steam.
+### 💼 2. Wallet Simulator & Parallel Scanner
+* **Parallel Steam ID Scanner:** Enter your SteamID64 or profile URL and the Next.js API query-fetches all supported app inventories in parallel (`Promise.all`) behind the scenes.
+* **Interactive Allocation Pie Chart:** Visualizes asset share distribution by value in your wallet. **Click on any slice of the chart** to instantly filter the loaded items table for that specific game.
+* **Clean Default State:** Starts completely empty, letting you build custom simulations manually or load inventories via public Steam scans.
 
-### 🔌 3. Extensão Chrome Companion (Plugin)
-* **Telemetria Silenciosa:** Uma extensão leve Manifest V3 para o Google Chrome/Brave/Edge.
-* **Integração:** Sempre que abrir a sua página de inventário na Steam Community, a extensão analisa a quantidade de itens visíveis e envia a telemetria via POST para o endpoint `/api/report-farm` do seu dashboard em background, mantendo a sua carteira sincronizada sem esforço.
+### 🔌 3. Chrome Companion Extension (Plugin)
+* **Silent Telemetry Syncing:** A lightweight Google Chrome Manifest V3 browser extension.
+* **Background Integration:** When you navigate to your Steam Community Inventory page, the extension automatically counts items and POSTs telemetry payloads to the dashboard's `/api/report-farm` endpoint, keeping your wallet up to date effortlessly.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas (Tech Stack)
+## 🛠️ Tech Stack
 
 * **Framework:** Next.js (App Router, React 19, TypeScript)
-* **Design & Styling:** Vanilla CSS (Charcoal Background `#0b0e14`, Emerald Green `#0ecb81` para lucros, Crimson Red `#f6465d` para taxas)
-* **Gráficos:** Recharts (Área, Linhas e Pie Chart)
-* **Ícones:** Lucide React
-* **Extensão:** Chrome Extensions Manifest V3 (Vanilla JS, HTML)
-* **APIs:** Integração direta com a Steam Web API oficial
+* **Design & Styling:** Vanilla CSS (Charcoal background `#0b0e14`, Emerald Green `#0ecb81` for yields, Crimson Red `#f6465d` for market fees)
+* **Charts:** Recharts (Area, Line, and interactive Pie Chart)
+* **Icons:** Lucide React
+* **Extension:** Chrome Extensions Manifest V3 (Vanilla JS, HTML)
+* **APIs:** Seamless integration with official Steam Web API endpoints
 
 ---
 
-## 📦 Como Instalar e Correr Localmente (Getting Started)
+## 📦 Getting Started
 
-### 💻 Dashboard Web (Next.js)
+### 💻 Web Dashboard (Next.js)
 
-1. **Clonar o repositório:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/darth-jpg/steam-profit-grid.git
    cd steam-profit-grid
    ```
 
-2. **Instalar dependências:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Configuração de Variáveis de Ambiente (Opcional):**
-   Crie um ficheiro `.env.local` na raiz do projeto e configure a sua chave da API Steam para permitir a resolução de Vanity URLs:
+3. **Configure Environment Variables (Optional):**
+   Create a `.env.local` file in the root directory and add your Steam Web API Key to enable Vanity URL resolving:
    ```env
-   STEAM_API_KEY=O_SEU_STEAM_API_KEY
+   STEAM_API_KEY=YOUR_STEAM_API_KEY
    ```
 
-4. **Iniciar o Servidor de Desenvolvimento:**
+4. **Run the Development Server:**
    ```bash
    npm run dev
    ```
-   Abra **[http://localhost:3000](http://localhost:3000)** no seu navegador.
+   Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
-5. **Gerar Build de Produção:**
+5. **Generate Production Build:**
    ```bash
    npm run build
    ```
 
 ---
 
-### 🔌 Extensão Chrome Companion (Plugin)
+### 🔌 Chrome Companion Extension (Plugin)
 
-Para carregar a extensão localmente no seu browser:
+To load the extension locally in your browser:
 
-1. Abra o Google Chrome e aceda a `chrome://extensions/`.
-2. Ative o **Developer Mode** (Modo de Programador) no canto superior direito.
-3. Clique em **Load unpacked** (Carregar expandida) no canto superior esquerdo.
-4. Selecione a subpasta `/extension` localizada dentro da pasta do repositório clonado:
+1. Open Google Chrome and go to `chrome://extensions/`.
+2. Enable **Developer Mode** using the toggle switch in the top-right corner.
+3. Click the **Load unpacked** button in the top-left corner.
+4. Select the `/extension` folder located inside your cloned project directory:
    `steam-profit-grid/extension`
-5. Clique no ícone da extensão no navegador, configure o URL do seu dashboard (ex: `http://localhost:3000`) e o seu Steam ID.
-6. Aceda à página de inventário público da Steam no Chrome e veja a telemetria a ser enviada em background!
+5. Click on the extension icon in your browser toolbar, configure your dashboard server URL (e.g., `http://localhost:3000`), and save your Steam ID.
+6. Open your public Steam inventory page in Chrome and check the console logs to see telemetry being reported in the background!
 
 ---
 
 ## 🚀 Deploy
 
-A aplicação está totalmente configurada e otimizada para ser colocada online na **Vercel** com um único clique, bastando conectar a sua conta do GitHub!
+This application is fully optimized and ready to deploy to the **Vercel Platform** with a single click by connecting your GitHub repository.

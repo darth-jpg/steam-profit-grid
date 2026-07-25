@@ -84,9 +84,6 @@ export default function Home() {
               <h1 className="text-xl sm:text-2xl font-extrabold text-white tracking-wide font-sans">
                 {t.title}
               </h1>
-              <p className="text-[10px] text-neutral-400 font-mono tracking-wider">
-                {t.subtitle}
-              </p>
             </div>
           </div>
 
@@ -209,15 +206,9 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-gaming-border py-6 mt-12 bg-gaming-dark/60 text-center text-xs text-neutral-500 font-mono">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} - To Profit or Not to Profit. Todos os direitos reservados. / All rights reserved.</p>
-          <div className="flex gap-4">
-            <span className="text-neon-green font-sans">Sleek Financial Tabbed UI</span>
-            <span>•</span>
-            <span className="text-neutral-400">Valve 15% Tax Engine</span>
-          </div>
         </div>
       </footer>
     </div>

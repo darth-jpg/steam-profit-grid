@@ -2,6 +2,8 @@
 
 > An advanced financial and analytical dashboard designed to optimize Steam farming and item trading, complemented by a companion browser extension for automated telemetry syncing.
 
+🔗 **Live Demo:** **[steam-profit-grid.vercel.app](https://steam-profit-grid.vercel.app)**
+
 ---
 
 ## 🚀 Key Features
